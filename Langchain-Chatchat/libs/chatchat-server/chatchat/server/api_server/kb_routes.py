@@ -137,7 +137,7 @@ summary_router.post("/recreate_summary_vector_store", summary="重建单个知�
 )
 
 @kb_router.post("/trigger_crawl", response_model=BaseResponse, summary="触发 arXiv 论文抓取")
-async def trigger_crawl(since: str = Body(None)):
+async def trigger_crawl(since: str = Body(None, embed=True)):
     import asyncio
 
     from chatchat.server.utils import build_logger

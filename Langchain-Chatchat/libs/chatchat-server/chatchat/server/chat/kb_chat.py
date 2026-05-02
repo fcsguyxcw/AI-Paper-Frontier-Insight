@@ -11,6 +11,7 @@ from fastapi.concurrency import run_in_threadpool
 from sse_starlette.sse import EventSourceResponse
 from langchain.callbacks import AsyncIteratorCallbackHandler
 from langchain.prompts.chat import ChatPromptTemplate
+from langchain.prompts import PromptTemplate
 
 
 from chatchat.settings import Settings
@@ -27,6 +28,13 @@ from chatchat.server.utils import (wrap_done, get_ChatOpenAI, get_default_llm,
 
 
 logger = build_logger()
+
+
+_CHINESE_CHAR = re.compile(r'[\u4e00-\u9fff]')
+
+
+def _has_chinese(text: str) -> bool:
+    return bool(_CHINESE_CHAR.search(text))
 
 
 NUMERAL_MAP = {
@@ -135,8 +143,29 @@ async def kb_chat(query: str = Body(..., description="用户输入", examples=["
                 if not ok:
                     raise ValueError(msg)
                 time_filter = parse_time_filter(query)
+
+                # 中文查询翻译为英文，提升跨语言检索和重排序精度
+                search_query = query
+                if _has_chinese(query):
+                    try:
+                        llm = get_ChatOpenAI(
+                            model_name=model,
+                            temperature=0.0,
+                            max_tokens=256,
+                        )
+                        tpl = PromptTemplate.from_template(
+                            "Translate the following Chinese query into concise academic English. "
+                            "Return ONLY the English translation, no explanation:\n\n{query}"
+                        )
+                        chain = tpl | llm
+                        result = await chain.ainvoke({"query": query})
+                        search_query = result.content.strip()
+                        logger.info(f"查询翻译: {query!r} → {search_query!r}")
+                    except Exception as e:
+                        logger.warning(f"查询翻译失败，使用原查询: {e}")
+
                 docs = await run_in_threadpool(search_docs,
-                                                query=query,
+                                                query=search_query,
                                                 knowledge_base_name=kb_name,
                                                 top_k=top_k,
                                                 score_threshold=score_threshold,
@@ -221,7 +250,7 @@ async def kb_chat(query: str = Body(..., description="用户输入", examples=["
                         max_length=Settings.kb_settings.RERANKER_MAX_LENGTH,
                         model_name_or_path=Settings.kb_settings.RERANKER_MODEL,
                     )
-                    lc_docs = reranker.compress_documents(documents=lc_docs, query=query)
+                    lc_docs = reranker.compress_documents(documents=lc_docs, query=search_query)
                     # 将 reranked 结果回写到 docs dict 列表
                     docs = [{"page_content": d.page_content, "metadata": d.metadata} for d in lc_docs]
                     source_documents = format_reference(kb_name, docs, api_address(is_public=True))

@@ -13,6 +13,7 @@ chatchat_data/data/knowledge_base/*/vector_store/
 chatchat_data/data/logs/
 
 # Crawler state & cache
+Langchain-Chatchat/libs/data/
 Langchain-Chatchat/data/
 
 # IDE
