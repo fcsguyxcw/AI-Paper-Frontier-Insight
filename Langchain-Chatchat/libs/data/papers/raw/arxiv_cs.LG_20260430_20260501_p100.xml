@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FR9tQU8HVotTDn/kZJrr1tzVTUo</id>
+  <title>arXiv Query: search_query=(cat:cs.LG) AND (submittedDate:"202604300000 TO 202605012359")&amp;id_list=&amp;start=100&amp;max_results=100</title>
+  <updated>2026-05-01T14:55:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:cs.LG+AND+submittedDate:%22202604300000+TO+202605012359%22&amp;start=100&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>111</opensearch:totalResults>
+  <opensearch:startIndex>100</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27510v1</id>
+    <title>FMCL: Class-Aware Client Clustering with Foundation Model Representations for Heterogeneous Federated Learning</title>
+    <updated>2026-04-30T07:08:52Z</updated>
+    <link href="https://arxiv.org/abs/2604.27510v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27510v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Federated Learning (FL) enables collaborative model training across distributed clients without sharing raw data, yet its performance deteriorates under statistical heterogeneity. Clustered Federated Learning addresses this challenge by grouping similar clients and training separate models per cluster. However, existing clustering strategies often rely on raw data statistics, model parameters, or heuristic similarity measures that fail to capture class-level semantic structure across heterogeneous domains and frequently require iterative coordination. We propose FMCL, a one-shot, class-aware client clustering framework that leverages foundation model representations to construct semantic client signatures. Using a frozen foundation model, FMCL computes class-level embedding prototypes for each client and measures similarity via cosine distance between their class-aware representations. Clustering is performed once prior to training, introducing no additional communication during federated optimization and remaining agnostic to the downstream model architecture. Extensive experiments across heterogeneous benchmarks demonstrate that FMCL improves federated performance and yields more stable clustering behavior compared to existing clustering-based methods under non-identically distributed data partitioning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T07:08:52Z</published>
+    <arxiv:comment>14 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mahad Ali</name>
+    </author>
+    <author>
+      <name>Laura J. Brattain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27414v1</id>
+    <title>Understanding Adversarial Transferability in Vision-Language Models for Autonomous Driving: A Cross-Architecture Analysis</title>
+    <updated>2026-04-30T04:33:38Z</updated>
+    <link href="https://arxiv.org/abs/2604.27414v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27414v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vision-language models (VLMs) are increasingly used in autonomous driving because they combine visual perception with language-based reasoning, supporting more interpretable decision-making, yet their robustness to physical adversarial attacks, especially whether such attacks transfer across different VLM architectures, is not well understood and poses a practical risk when attackers do not know which model a vehicle uses. We address this gap with a systematic cross-architecture study of adversarial transferability in VLM-based driving, evaluating three representative architectures (Dolphins, OmniDrive, and LeapVAD) using physically realizable patches placed on roadside infrastructure in both crosswalk and highway scenarios. Our transfer-matrix evaluation shows high cross-architecture effectiveness, with transfer rates of 73-91% (mean TR = 0.815 for crosswalk and 0.833 for highway) and sustained frame-level manipulation over 64.7-79.4% of the critical decision window even when patches are not optimized for the target model.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T04:33:38Z</published>
+    <arxiv:comment>9 pages, 2 figures. Accepted at SAE WCX 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>SAE Technical Paper 2026-01-0170, SAE WCX 2026</arxiv:journal_ref>
+    <author>
+      <name>David Fernandez</name>
+    </author>
+    <author>
+      <name>Pedram MohajerAnsari</name>
+    </author>
+    <author>
+      <name>Amir Salarpour</name>
+    </author>
+    <author>
+      <name>Mert D. Pese</name>
+    </author>
+    <arxiv:doi>10.4271/2026-01-0170</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4271/2026-01-0170" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27319v1</id>
+    <title>REBENCH: A Procedural, Fair-by-Construction Benchmark for LLMs on Stripped-Binary Types and Names (Extended Version)</title>
+    <updated>2026-04-30T02:03:37Z</updated>
+    <link href="https://arxiv.org/abs/2604.27319v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27319v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have achieved remarkable progress in recent years, driving their adoption across a wide range of domains, including computer security. In reverse engineering, LLMs are increasingly applied to critical tasks such as function and variable name recovery and type inference. However, despite the rapid growth of research in this area, progress has been hindered by the absence of a standardized dataset. Existing studies rely on disparate datasets, preprocessing pipelines, and evaluation metrics, making fair comparisons between approaches difficult and obscuring a clear understanding of LLM capabilities in binary analysis. To address these challenges, we present REBench, a comprehensive benchmark dataset for evaluating LLMs on binary reverse engineering tasks. REBench consolidates a superset of existing datasets, comprising hundreds of millions of lines of source code and a diverse collection of binaries spanning multiple architectures and optimization levels. REBench adopts a knowledge-base-driven methodology that stores byte-level stack information to generate ground truth, ensuring that task difficulty is preserved while maintaining universal applicability. This design enables fair evaluation across tasks while avoiding simplifications that could bias results. As a use case, we apply REBench to measure the reverse engineering performance of LLMs and the result demonstrates difficulties in complex tasks.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T02:03:37Z</published>
+    <arxiv:comment>This is an extended version of our paper, which appears in AIWare 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Jun Yeon Won</name>
+    </author>
+    <author>
+      <name>Xin Jin</name>
+    </author>
+    <author>
+      <name>Shiqing Ma</name>
+    </author>
+    <author>
+      <name>Zhiqiang Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27952v1</id>
+    <title>Diffusion-OAMP for Joint Image Compression and Wireless Transmission</title>
+    <updated>2026-04-30T14:49:31Z</updated>
+    <link href="https://arxiv.org/abs/2604.27952v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27952v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Joint image compression and wireless transmission remain relatively underexplored compared to generic image restoration, despite its importance in practical communication systems. We formulate this problem under an equivalent linear model, and propose Diffusion-OAMP, a training-free reconstruction framework that embeds a pre-trained diffusion model into the OAMP algorithm. In Diffusion-OAMP, the OAMP linear estimator produces pseudo-AWGN observations, while the diffusion model serves as a nonlinear estimator under an SNR-matching rule. This framework offers a way to incorporate multiple generative priors into OAMP. Experiments with varying compression ratios and noise levels show that Diffusion-OAMP performs favorably against classic methods in the evaluated settings.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T14:49:31Z</published>
+    <arxiv:comment>6 pages, 5 figures, 2 tables, submitted for a possible publication</arxiv:comment>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Wentao Hou</name>
+    </author>
+    <author>
+      <name>Yimin Bai</name>
+    </author>
+    <author>
+      <name>Zelei Luo</name>
+    </author>
+    <author>
+      <name>Jiadong Hong</name>
+    </author>
+    <author>
+      <name>Lei Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28186v1</id>
+    <title>Computing Equilibrium beyond Unilateral Deviation</title>
+    <updated>2026-04-30T17:59:07Z</updated>
+    <link href="https://arxiv.org/abs/2604.28186v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28186v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T17:59:07Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Mingyang Liu</name>
+    </author>
+    <author>
+      <name>Gabriele Farina</name>
+    </author>
+    <author>
+      <name>Asuman Ozdaglar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28167v1</id>
+    <title>Mapping the Phase Diagram of the Vicsek Model with Machine Learning</title>
+    <updated>2026-04-30T17:52:23Z</updated>
+    <link href="https://arxiv.org/abs/2604.28167v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28167v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this study, we use machine learning to classify and interpolate the phase structure of the Vicsek flocking model across the three-dimensional parameter space $(η,ρ,v_0)$. We construct a dataset of simulated parameter points and characterize each point using long-time dynamical observables. These observables are then used as inputs to a K-Means clustering procedure, which assigns each point to a disorder, order, or coexistence phase. Using these clustered labels, we train a neural-network classifier to learn the mapping from model parameters to phase behavior, achieving a classification accuracy of 0.92. The resulting phase map resolves a narrow coexistence region separating the ordered and disordered phases and extends the inferred phase boundaries beyond the originally sampled simulation points. More broadly, this approach provides a systematic way to convert sparse simulation data into a global phase diagram for collective-motion models.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T17:52:23Z</published>
+    <arxiv:comment>8 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Grace T. Bai</name>
+    </author>
+    <author>
+      <name>Brandon B. Le</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28163v1</id>
+    <title>Sequential Inference for Gaussian Processes: A Signal Processing Perspective</title>
+    <updated>2026-04-30T17:48:09Z</updated>
+    <link href="https://arxiv.org/abs/2604.28163v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28163v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The proliferation of capable and efficient machine learning (ML) models marks one of the strongest methodological shifts in signal processing (SP) in its nearly 100-year history. ML models support the development of SP systems that represent complex, nonlinear relationships with high predictive accuracy. Adapting these models often requires sequential inference, which differs both theoretically and methodologically from the usual paradigm of ML, where data are often assumed independent and identically distributed. Gaussian processes (GPs) are a flexible yet principled framework for modeling random functions, and they have become increasingly relevant to SP as statistical and ML methods assume a more prominent role. We provide a self-contained, tutorial-style overview of GPs, with a particular focus on recent methodological advances in sequential, incremental, or streaming inference. We introduce these techniques from a signal-processing perspective while bridging them to recent advances in ML. Many of the developments we survey have direct applications to state-space modeling, sequential regression and forecasting, anomaly detection in time series, sequential Bayesian optimization, adaptive and active sensing, and sequential detection and decision-making. By organizing these advances from a signal-processing perspective, we intend to equip practitioners with practical tools and a coherent roadmap for deploying sequential GP models in real-world systems.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T17:48:09Z</published>
+    <arxiv:comment>53 pages, 7 figures. Accepted to IEEE Signal Processing Magazine</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Daniel Waxman</name>
+    </author>
+    <author>
+      <name>Fernando Llorente</name>
+    </author>
+    <author>
+      <name>Petar M. Djurić</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28156v1</id>
+    <title>FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems</title>
+    <updated>2026-04-30T17:43:07Z</updated>
+    <link href="https://arxiv.org/abs/2604.28156v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28156v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical "plug-in" module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile signals and (ii) a compact multi-channel readout board that streams synchronized measurements for real-time control and large-scale data collection. FlexiTac pads adopt a sealed three-layer laminate stack (FPC-Velostat-FPC) with electrode patterns directly integrated into flexible printed circuits, substantially improving fabrication throughput and repeatability while maintaining mechanical compliance for deployment on both rigid and soft grippers. The readout electronics use widely available, low-cost components and stream tactile signals to a host computer at 100 Hz via serial communication. Across multiple configurations, including fingertip pads and larger tactile mats, FlexiTac can be mounted on diverse platforms without major mechanical redesign. We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation. Our project page is available at https://flexitac.github.io/.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T17:43:07Z</published>
+    <arxiv:comment>Website: https://flexitac.github.io/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Binghao Huang</name>
+    </author>
+    <author>
+      <name>Yunzhu Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28102v1</id>
+    <title>FiLMMeD: Feature-wise Linear Modulation for Cross-Problem Multi-Depot Vehicle Routing</title>
+    <updated>2026-04-30T16:48:13Z</updated>
+    <link href="https://arxiv.org/abs/2604.28102v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28102v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Solving practical multi-depot vehicle routing problems (MDVRP) is a challenging optimization task central to modern logistics, increasingly driven by e-commerce. To address the MDVRP's computational complexity, neural-based combinatorial optimization methods offer a promising scalable alternative to traditional approaches. However, neural-based methods typically rely on rigid architectures and input encodings tailored to specific problem formulations. In real-world settings, heterogeneous constraints create multiple MDVRP variants, limiting the applicability of such models. While multi-task learning (MTL) has begun to accelerate the development of unified neural-based solvers, prior works focus almost exclusively on single-depot VRPs, leaving the MDVRP unaddressed. To bridge this gap, we propose Feature-wise Linear Modulation for Cross-Problem Multi-Depot Vehicle Routing (FiLMMeD), a novel unified neural-based model for 24 different MDVRP variants. We introduce three main contributions: (1) to improve the model's generalization, we augment the standard Transformer encoder with Feature-wise Linear Modulation (FiLM), which dynamically conditions learned internal representations based on the active set of constraints; (2) we provide an initial demonstration of Preference Optimization in the MTL setting, establishing it as a superior alternative to Reinforcement Learning for future MTL works; (3) to mitigate the generalization gap caused by the introduction of multi-depot constraints, we introduce a targeted curriculum learning strategy that progressively exposes the model to increasingly more complex constraint interactions. Extensive experiments on 24 MDVRP variants (including 8 novel formulations) and 16 single-depot VRPs confirm the effectiveness of FiLMMeD, which consistently outperforms state-of-the-art baselines. Our code is available at: https://github.com/AJ-Correa/FiLMMeD/tree/main</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T16:48:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Arthur Corrêa</name>
+    </author>
+    <author>
+      <name>Paulo Nascimento</name>
+    </author>
+    <author>
+      <name>Samuel Moniz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28016v1</id>
+    <title>Faster 3D Gaussian Splatting Convergence via Structure-Aware Densification</title>
+    <updated>2026-04-30T15:37:20Z</updated>
+    <link href="https://arxiv.org/abs/2604.28016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>3D Gaussian Splatting has emerged as a powerful scene representation for real-time novel-view synthesis. However, its standard adaptive density control relies on screen-space positional gradients, which do not distinguish between geometric misplacement and frequency aliasing, often leading to either over-blurred high-frequency textures or inefficient over-densification. We present a structure-aware densification framework. Our key insight is that the decision to subdivide a Gaussian should be driven by an explicit comparison between its projected screen-space extent and the local structure of the texture it seeks to represent. We introduce a multi-scale frequency analysis combining structure tensors with Laplacian scale space analysis to estimate the dominant frequency at each pixel, enabling robust supervision across varying texture scales. Based on this analysis, we define $η$, a per-Gaussian, per-axis frequency violation metric that indicates when a primitive may be under-resolving local texture details. Unlike methods that perform isotropic splitting (e.g., splitting each Gaussian into two smaller ones with uniform shape), our approach performs anisotropic splitting. For each axis with high $η$, we compute a split factor to better resolve the local frequency content. We further introduce a multiview consistency criterion that aggregates $η$ observations across multiple views. By performing densification early and faster, we skip the lengthy iterative densification phases required by baseline methods and achieve significantly faster convergence. Experiments on standard benchmarks demonstrate that our method also achieves superior reconstruction quality, particularly in high-frequency regions.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T15:37:20Z</published>
+    <arxiv:comment>Siggraph 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Linjie Lyu</name>
+    </author>
+    <author>
+      <name>Ayush Tewari</name>
+    </author>
+    <author>
+      <name>Jianchun Chen</name>
+    </author>
+    <author>
+      <name>Thomas Leimkühler</name>
+    </author>
+    <author>
+      <name>Christian Theobalt</name>
+    </author>
+    <arxiv:doi>10.1145/3799902.3811212</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3799902.3811212" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27786v1</id>
+    <title>On the Expressive Power of GNNs to Solve Linear SDPs</title>
+    <updated>2026-04-30T12:29:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.27786v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27786v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semidefinite programs (SDPs) are a powerful framework for convex optimization and for constructing strong relaxations of hard combinatorial problems. However, solving large SDPs can be computationally expensive, motivating the use of machine learning models as fast computational surrogates. Graph neural networks (GNNs) are a natural candidate in this setting due to their sparsity-awareness and ability to model variable-constraint interactions. In this work, we study what expressive power is sufficient to recover optimal SDP solutions. We first prove negative results showing that standard GNN architectures fail on recovering linear SDP solutions. We then identify a more expressive architecture that captures the key structure of SDPs and can, in particular, emulate the updates of a standard first-order solver. Empirically, on both synthetic and \textsc{SdpLib} benchmarks of various classes of SDPs, this more expressive architecture achieves consistently lower prediction error and objective gap than theoretically weaker baselines. Finally, using the learned high-quality predictions to warm-start the first-order solver yields practical speedups of up to 80%.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T12:29:14Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Chendi Qian</name>
+    </author>
+    <author>
+      <name>Christopher Morris</name>
+    </author>
+  </entry>
+</feed>

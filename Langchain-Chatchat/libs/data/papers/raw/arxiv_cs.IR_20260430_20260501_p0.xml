@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/VDK8pEsT4a9bqRyx64Zb1dGOo08</id>
+  <title>arXiv Query: search_query=(cat:cs.IR) AND (submittedDate:"202604300000 TO 202605012359")&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-05-01T14:55:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:cs.IR+AND+submittedDate:%22202604300000+TO+202605012359%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27878v1</id>
+    <title>SimEval-IR: A Unified Toolkit and Benchmark Suite for Evaluating User Simulators and Search Sessions</title>
+    <updated>2026-04-30T13:56:18Z</updated>
+    <link href="https://arxiv.org/abs/2604.27878v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27878v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>User simulators are increasingly central to interactive information retrieval, yet the community lacks standardized evaluation tools. Simulators serve two objectives, behavioral realism (matching real user behavior) and tester reliability (producing valid system rankings), and these are often conflated despite being distinct and sometimes conflicting. We present SimEval-IR, an open-source toolkit and benchmark suite that makes this distinction measurable. SimEval-IR provides: (1) a canonical session schema unifying session search and conversational interactions, with validated dataset adapters and explicit loss accounting; (2) three executable benchmarks covering behavioral realism, tester reliability with RATE-style estimation, and an analysis linking the two; and (3) baseline results across four real datasets in two languages and four simulator families. Our key finding: the classifier-discriminator ''human-likeness'' check, the dominant realism test in the literature, has essentially no pooled predictive power for system-ranking validity ($r{=}{+}0.09$, $n{=}48$), while marginal click-depth distance and Fréchet distance over session embeddings give a much stronger signal ($|r|{=}0.43$ and $0.40$, $p{\leq}0.005$). SimEval-IR is released with all configurations and scripts to reproduce the reported analysis.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T13:56:18Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26), July 20--24, 2026, Melbourne, VIC, Australia</arxiv:journal_ref>
+    <author>
+      <name>Saber Zerhoudi</name>
+    </author>
+    <arxiv:doi>10.1145/3805712.3808635</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3805712.3808635" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27410v1</id>
+    <title>From Unstructured to Structured: LLM-Guided Attribute Graphs for Entity Search and Ranking</title>
+    <updated>2026-04-30T04:22:20Z</updated>
+    <link href="https://arxiv.org/abs/2604.27410v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27410v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Entity search, i.e., finding the most similar entities to a query entity, faces unique challenges in e-commerce, where product similarity varies across categories and contexts. Traditional embedding-based approaches often struggle to capture nuanced context-specific attribute relevance. In this paper, we present a two-stage approach combining Large Language Model (LLM)-driven attribute graph construction with graph-aware LLM ranking. In the offline stage, we extract structured product attributes from unstructured text, and construct a reusable attribute graph with category-aware schemas. In the online stage, we rank retrieved candidates by reasoning over this structured representation rather than raw text, reducing per-product token usage by 57% while improving ranking precision. Experiments show that our approach outperforms multiple baselines under zero-shot scenarios, achieving a over 5% improvement in average precision without requiring training data, generalizes robustly across diverse product categories, and shows immense potential for real-world deployment.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T04:22:20Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Yilun Zhu</name>
+    </author>
+    <author>
+      <name>Nikhita Vedula</name>
+    </author>
+    <author>
+      <name>Shervin Malmasi</name>
+    </author>
+    <arxiv:doi>10.1145/3805712.3808501</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3805712.3808501" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28142v1</id>
+    <title>Efficient Multivector Retrieval with Token-Aware Clustering and Hierarchical Indexing</title>
+    <updated>2026-04-30T17:30:15Z</updated>
+    <link href="https://arxiv.org/abs/2604.28142v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28142v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multivector retrieval models achieve state-of-the-art effectiveness through fine-grained token-level representations, but their deployment incurs substantial computational and memory costs. Current solutions, based on the well-known k-means clustering algorithm, group similar vectors together to enable both effective compression and efficient retrieval. However, standard k-means scales poorly with the number of clusters and dataset size, and favours frequent tokens during training while underrepresenting rare, discriminative ones. In this work, we introduce TACHIOM, a multivector retrieval system that exploits token-level structure to significantly accelerate both clustering and retrieval. By accounting for tokens' distribution during centroid allocation, TACHIOM easily scales to millions of centroids, enabling highly accurate document scoring using only centroids, avoiding expensive token-level computation. TACHIOM combines a graph-based index over centroids with an optimized Product Quantization layout for efficient final scoring. Experiments on MS-MARCOv1 and LoTTE show that TACHIOM achieves up to $247\times$ faster clustering than k-means and up to $9.8\times$ retrieval speedup over state-of-the-art systems while maintaining comparable or superior effectiveness.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T17:30:15Z</published>
+    <arxiv:comment>6 pages, 2 figures, SIGIR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Silvio Martinico</name>
+    </author>
+    <author>
+      <name>Franco Maria Nardini</name>
+    </author>
+    <author>
+      <name>Cosimo Rulli</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27577v1</id>
+    <title>Reproducing Adaptive Reranking for Reasoning-Intensive IR</title>
+    <updated>2026-04-30T08:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2604.27577v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27577v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The classical cascading pipeline of retrieve--rerank suffers from a bounded recall problem, stemming from limitations of the first-stage retriever. Most current approaches address the bounded recall problem by improving the first-stage retriever, but this incurs substantial training and inference costs, especially to handle queries that require substantial reasoning. To circumvent the computational costs of reasoning-based retrievers, we replicate the findings of GAR, Graph-based Adaptive Reranking, on the BRIGHT reasoning-intensive retrieval benchmark. GAR addresses the bounded recall problem by modifying the reranking process itself through iterative exploration of a corpus graph, but it was previously only tested on models designed for topical and question-answering-style queries. Hence, reproduce GAR in reasoning-intensive settings with reasoning and non-reasoning reranking models. We observe that the quality of the reranker's signal plays an important role in identifying additional relevant documents within the corpus graph. Overall, we find that GAR boosts the effectiveness of reasoning-intensive retrieval across a variety of models while contributing minimally to computational overheads. Ultimately, this work enables more practical deployment of retrieval systems that can address reasoning-intensive queries.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T08:30:09Z</published>
+    <arxiv:comment>7 figures, 11 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Mandeep Rathee</name>
+    </author>
+    <author>
+      <name>V Venktesh</name>
+    </author>
+    <author>
+      <name>Sean MacAvaney</name>
+    </author>
+    <author>
+      <name>Avishek Anand</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27820v1</id>
+    <title>ObjectGraph: From Document Injection to Knowledge Traversal -- A Native File Format for the Agentic Era</title>
+    <updated>2026-04-30T13:03:54Z</updated>
+    <link href="https://arxiv.org/abs/2604.27820v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27820v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Every document format in existence was designed for a human reader moving linearly through text. Autonomous LLM agents do not read - they retrieve. This fundamental mismatch forces agents to inject entire documents into their context window, wasting tokens on irrelevant content, compounding state across multi-turn loops, and broadcasting information indiscriminately across agent roles. We argue this is not a prompt engineering problem, not a retrieval problem, and not a compression problem: it is a format problem.
+  We introduce OBJECTGRAPH (.og), a file format that reconceives the document as a typed, directed knowledge graph to be traversed rather than a string to be injected. OBJECTGRAPH is a strict superset of Markdown - every .md file is a valid .og file - requires no infrastructure beyond a two-primitive query protocol, and is readable by both humans and agents without tooling.
+  We formalize the Document Consumption Problem, characterise six structural properties no existing format satisfies simultaneously, and prove OBJECTGRAPH satisfies all six. We further introduce the Progressive Disclosure Model, the Role-Scoped Access Protocol, and Executable Assertion Nodes as native format primitives. Empirical evaluation across five document classes and eight agent task types demonstrates up to 95.3 percent token reduction with no statistically significant degradation in task accuracy (p &gt; 0.05). Transpiler fidelity reaches 98.7 percent content preservation on a held-out document benchmark.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T13:03:54Z</published>
+    <arxiv:comment>12 pages, 4 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mohit Dubey</name>
+    </author>
+    <author>
+      <name>Open Gigantic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27600v1</id>
+    <title>Purifying Multimodal Retrieval: Fragment-Level Evidence Selection for RAG</title>
+    <updated>2026-04-30T08:50:03Z</updated>
+    <link href="https://arxiv.org/abs/2604.27600v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27600v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multimodal Retrieval-Augmented Generation (MRAG) is widely adopted for Multimodal Large Language Models (MLLMs) with external evidence to reduce hallucinations. Despite its success, most existing MRAG frameworks treat retrieved evidence as indivisible documents, implicitly assuming that all content within a document is equally informative. In practice, however, sometimes only a small fraction of a document is relevant to a given query, while the remaining content introduces substantial noise that may lead to performance degradation. We address this fundamental limitation by reframing MRAG as a fine-grained evidence selection problem. We propose Fragment-level Evidence Selection for RAG (FES-RAG), a framework that selects atomic multimodal fragments rather than entire documents as grounding evidence. FES-RAG decomposes retrieved multimodal documents into sentence-level textual fragments and region-level visual fragments, enabling precise identification of evidence that directly supports generation. To guide fragment selection, we introduce Fragment Information Gain (FIG), a principled metric that measures the marginal contribution of each fragment to the MLLM's generation confidence. Based on FIG, we distill fragment-level utility judgments from a high-capacity MLLM into a lightweight selector, achieving accurate evidence selection with low inference overhead. Experiments on the M2RAG benchmark show that FES-RAG consistently outperforms state-of-the-art document-level MRAG methods, achieving up to 27 percent relative improvement in CIDEr. By selecting fewer yet more informative fragments, our approach substantially reduces context length while improving factual accuracy and generation coherence.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T08:50:03Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Xihang Wang</name>
+    </author>
+    <author>
+      <name>Zihan Wang</name>
+    </author>
+    <author>
+      <name>Chengkai Huang</name>
+    </author>
+    <author>
+      <name>Cao Liu</name>
+    </author>
+    <author>
+      <name>Ke Zeng</name>
+    </author>
+    <author>
+      <name>Quan Z. Sheng</name>
+    </author>
+    <author>
+      <name>Lina Yao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27421v1</id>
+    <title>A Reproducibility Study of LLM-Based Query Reformulation</title>
+    <updated>2026-04-30T04:51:52Z</updated>
+    <link href="https://arxiv.org/abs/2604.27421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are now widely used for query reformulation and expansion in Information Retrieval, with many studies reporting substantial effectiveness gains. However, these results are typically obtained under heterogeneous experimental conditions, making it difficult to assess which findings are reproducible and which depend on specific implementation choices. In this work, we present a systematic reproducibility and comparative study of ten representative LLM-based query reformulation methods under a unified and strictly controlled experimental framework. We evaluate methods across two architectural LLM families at two parameter scales, three retrieval paradigms (lexical, learned sparse, and dense), and nine benchmark datasets spanning TREC Deep Learning and BEIR. Our results show that reformulation gains are strongly conditioned on the retrieval paradigm, that improvements observed under lexical retrieval do not consistently transfer to neural retrievers, and that larger LLMs do not uniformly yield better downstream performance. These findings clarify the stability and limits of reported gains in prior work. To enable transparent replication and ongoing comparison, we release all prompts, configurations, evaluation scripts, and run files through QueryGym, an open-source reformulation toolkit with a public leaderboard.\footnote{https://leaderboard.querygym.com}</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T04:51:52Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Amin Bigdeli</name>
+    </author>
+    <author>
+      <name>Radin Hamidi Rad</name>
+    </author>
+    <author>
+      <name>Hai Son Le</name>
+    </author>
+    <author>
+      <name>Mert Incesu</name>
+    </author>
+    <author>
+      <name>Negar Arabzadeh</name>
+    </author>
+    <author>
+      <name>Charles L. A. Clarke</name>
+    </author>
+    <author>
+      <name>Ebrahim Bagheri</name>
+    </author>
+    <arxiv:doi>10.1145/3805712.3808560</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3805712.3808560" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27747v1</id>
+    <title>Position-Aware Drafting for Inference Acceleration in LLM-Based Generative List-Wise Recommendation</title>
+    <updated>2026-04-30T11:37:08Z</updated>
+    <link href="https://arxiv.org/abs/2604.27747v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27747v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM)-based generative list-wise recommendation has advanced rapidly, but decoding remains sequential and thus latency-prone. To accelerate inference without changing the target distribution, speculative decoding (SD) uses a small draft model to propose several next tokens at once and a target LLM to verify and accept the longest prefix, skipping multiple steps per round. In generative recommendation, however, each item is represented by multiple semantic-ID tokens, often with separators, and current drafts typically treat these tokens uniformly. This overlooks two practical facts: (i) a token's semantics depend on its within-item slot, and (ii) uncertainty tends to increase with speculation depth. Without modeling these effects, SD's speedups can be limited. We introduce PAD-Rec, Position-Aware Drafting for generative Recommendation, a lightweight module that augments the draft model with two complementary signals. Item position embeddings explicitly encode the within-item slot of each token, strengthening structural awareness. Step position embeddings encode the draft step, allowing the model to adapt to depth-dependent uncertainty and improve proposal quality. To harmonize these signals with base features, we add simple gates: a learnable coefficient for item slots and a context-driven gate for draft steps. The module is trainable, easy to integrate with standard draft models, and adds negligible inference overhead. Extensive experiments on four real-world datasets show up to 3.1x wall-clock speedup and about 5% average wall-clock speedup gain over strong SD baselines, while largely preserving recommendation quality.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T11:37:08Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Jiaju Chen</name>
+    </author>
+    <author>
+      <name>Chongming Gao</name>
+    </author>
+    <author>
+      <name>Chenxiao Fan</name>
+    </author>
+    <author>
+      <name>Haoyan Liu</name>
+    </author>
+    <author>
+      <name>Qingpeng Cai</name>
+    </author>
+    <author>
+      <name>Peng Jiang</name>
+    </author>
+    <author>
+      <name>Xiangnan He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27852v1</id>
+    <title>NeocorRAG: Less Irrelevant Information, More Explicit Evidence, and More Effective Recall via Evidence Chains</title>
+    <updated>2026-04-30T13:37:01Z</updated>
+    <link href="https://arxiv.org/abs/2604.27852v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27852v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although precise recall is a core objective in Retrieval-Augmented Generation (RAG), a critical oversight persists in the field: improvements in retrieval performance do not consistently translate to commensurate gains in downstream reasoning. To diagnose this gap, we propose the Recall Conversion Rate (RCR), a novel evaluation metric to quantify the contribution of retrieval to reasoning accuracy. Our quantitative analysis of mainstream RAG methods reveals that as Recall@5 improves, the RCR exhibits a near-linear decay. We identify the neglect of retrieval quality in these methods as the underlying cause. In contrast, approaches that focus solely on quality optimization often suffer from inferior recall performance. Both categories lack a comprehensive understanding of retrieval quality optimization, resulting in a trade-off dilemma. To address these challenges, we propose comprehensive retrieval quality optimization criteria and introduce the NeocorRAG framework. This framework achieves holistic retrieval quality optimization by systematically mining and utilizing Evidence Chains. Specifically, NeocorRAG first employs an innovative activated search algorithm to obtain a refined candidate space. Then it ensures precise evidence chain generation through constrained decoding. Finally, the retrieved set of evidence chains guides the retrieval optimization process. Evaluated on benchmarks including HotpotQA, 2WikiMultiHopQA, MuSiQue, and NQ, NeocorRAG achieves SOTA performance on both 3B and 70B parameter models, while consuming less than 20% of tokens used by comparable methods. This study presents an efficient, training-free paradigm for RAG enhancement that effectively optimizes retrieval quality while maintaining high recall. Our code is released at https://github.com/BUPT-Reasoning-Lab/NeocorRAG.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T13:37:01Z</published>
+    <arxiv:comment>Accepted to WWW 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>Proc. ACM Web Conf. 2026, pages 1899-1910</arxiv:journal_ref>
+    <author>
+      <name>Shiyao Peng</name>
+    </author>
+    <author>
+      <name>Qianhe Zheng</name>
+    </author>
+    <author>
+      <name>Zhuodi Hao</name>
+    </author>
+    <author>
+      <name>Zichen Tang</name>
+    </author>
+    <author>
+      <name>Rongjin Li</name>
+    </author>
+    <author>
+      <name>Qing Huang</name>
+    </author>
+    <author>
+      <name>Jiayu Huang</name>
+    </author>
+    <author>
+      <name>Jiacheng Liu</name>
+    </author>
+    <author>
+      <name>Yifan Zhu</name>
+    </author>
+    <author>
+      <name>Haihong E</name>
+    </author>
+    <arxiv:doi>10.1145/3774904.3792093</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3774904.3792093" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27306v1</id>
+    <title>NuggetIndex: Governed Atomic Retrieval for Maintainable RAG</title>
+    <updated>2026-04-30T01:33:56Z</updated>
+    <link href="https://arxiv.org/abs/2604.27306v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27306v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-augmented generation (RAG) systems are frequently evaluated via fact-based metrics, yet standard implementations retrieve passages or static propositions. This unit mismatch between evaluation and retrieval objects hinders maintenance when corpora evolve and fails to capture superseded facts or source disagreements. We propose NuggetIndex, a retrieval system that stores atomic information units as managed records, so called nuggets. Each record maintains links to evidence, a temporal validity interval, and a lifecycle state. By filtering invalid or deprecated nuggets prior to ranking, the system prevents the inclusion of outdated information. We evaluate the approach using a nuggetized MS MARCO subset, a temporal Wikipedia QA dataset, and a multi-hop QA task. Against passage and unmanaged proposition retrieval baselines, NuggetIndex improves nugget recall by 42%, increases temporal correctness by 9 percentage points without the recall collapse observed in time-filtered baselines, and reduces conflict rates by 55%. The compact nugget format reduces generator input length by 64% while enabling lightweight index structures suitable for browser-based and resource-constrained deployment. We release our implementation, datasets, and evaluation scripts</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T01:33:56Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26), July 20--24, 2026, Melbourne, VIC, Australia</arxiv:journal_ref>
+    <author>
+      <name>Saber Zerhoudi</name>
+    </author>
+    <author>
+      <name>Michael Granitzer</name>
+    </author>
+    <author>
+      <name>Jelena Mitrovic</name>
+    </author>
+    <arxiv:doi>10.1145/3805712.3809687</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3805712.3809687" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27790v1</id>
+    <title>How Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews</title>
+    <updated>2026-04-30T12:32:21Z</updated>
+    <link href="https://arxiv.org/abs/2604.27790v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27790v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative AI is being increasingly integrated into web search for the convenience it provides users. In this work, we aim to understand how generative AI disrupts web search by retrieving and presenting the information and sources differently from traditional search engines. We introduce a public benchmark dataset of 11,500 user queries to support our study and future research of generative search. We compare the search results returned by Google's search engine, the accompanying AI Overview (AIO), and Gemini Flash 2.5 for each query. We have made several key findings. First, we find that for 51.5\% of representative, real-user queries, AIOs are generated, and are displayed above the organic search results. Controversial questions frequently result in an AIO. Second, we show that the retrieved sources are substantially different for each search engine (&lt;0.2 average Jaccard similarity). Traditional Google search is significantly more likely to retrieve information from popular or institutional websites in government or education, while generative search engines are significantly more likely to retrieve Google-owned content. Third, we observe that websites that block Google's AI crawler are significantly less likely to be retrieved by AIOs, despite having access to the content. Finally, AIOs are less consistent when processing two runs of the same query, and are less robust to minor query edits. Our findings have important implications for understanding how generative search impacts website visibility, the effectiveness of generative engine optimization techniques, and the information users receive. We call for revenue frameworks to foster a sustainable and mutually beneficial ecosystem for publishers and generative search providers.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T12:32:21Z</published>
+    <arxiv:comment>Paper Accepted to ACM SIGIR 2026 (49th International ACM SIGIR Conference on Research and Development in Information Retrieval)</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Riley Grossman</name>
+    </author>
+    <author>
+      <name>Songjiang Liu</name>
+    </author>
+    <author>
+      <name>Michael K. Chen</name>
+    </author>
+    <author>
+      <name>Mike Smith</name>
+    </author>
+    <author>
+      <name>Cristian Borcea</name>
+    </author>
+    <author>
+      <name>Yi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27599v1</id>
+    <title>One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation</title>
+    <updated>2026-04-30T08:49:44Z</updated>
+    <link href="https://arxiv.org/abs/2604.27599v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27599v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are increasingly used for recommendation reranking, but their listwise predictions can depend on the order in which candidates are presented. This creates a mismatch between the set-based nature of recommendation and the sequence-based computation of decoder-only LLMs, where permuting an otherwise identical candidate set can change item scores and final rankings. Such order sensitivity makes LLM-based rerankers difficult to rely on, since rankings may reflect prompt serialization rather than user preference. We propose InvariRank, a permutation-invariant listwise reranking framework that addresses this dependence at the architectural level. InvariRank blocks cross-candidate attention with a structured attention mask and negates position-induced scoring changes through shared positional framing under Rotary Positional Embeddings (RoPE). Combined with a listwise learning-to-rank objective, the model scores all candidates in a single forward pass, avoiding permutation-based invariance training objectives that require multiple permutations of a candidate set. Experiments on recommendation benchmarks show that InvariRank maintains competitive ranking effectiveness while producing stable rankings across candidate permutations. The results suggest that architectural invariance is a practical route to reliable and efficient LLM-based recommendation reranking. The source code is at https://github.com/ejbito/InvariRank.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T08:49:44Z</published>
+    <arxiv:comment>Accepted at SIGIR 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Ethan Bito</name>
+    </author>
+    <author>
+      <name>Yongli Ren</name>
+    </author>
+    <author>
+      <name>Estrid He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27321v1</id>
+    <title>Toward Autonomous SOC Operations: End-to-End LLM Framework for Threat Detection, Query Generation, and Resolution in Security Operations</title>
+    <updated>2026-04-30T02:06:46Z</updated>
+    <link href="https://arxiv.org/abs/2604.27321v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27321v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Security Operations Centers (SOCs) face mounting operational challenges. These challenges come from increasing threat volumes, heterogeneous SIEM platforms, and time-consuming manual triage workflows. We present an end-to-end threat management framework that integrates ensemble-based detection, syntax-constrained query generation, and retrieval-augmented resolution support to automate critical security workflows. Our detection module evaluates both traditional machine learning classifiers and large language models (LLMs), then combines the three best-performing LLMs to create an ensemble model, achieving 82.8% accuracy while maintaining 0.120 false positive rate on SIEM logs. We introduce the SQM (Syntax Query Metadata) architecture for automated evidence collection. It uses platform-specific syntax constraints, metadata-based retrieval, and documentation-grounded prompting to generate executable queries for IBM QRadar and Google SecOps. SQM achieves a BLEU score of 0.384 and a ROUGE-L score of 0.731. These results are more than twice as good as the baseline LLM performance. For incident resolution and recommendation generation, we demonstrate that integrating SQM-derived evidence improves resolution code prediction accuracy from 78.3% to 90.0%, with an overall recommendation quality score of 8.70. In production SOC environments, our framework reduces average incident triage time from hours to under 10 minutes. This work demonstrates that domain-constrained LLM architectures with retrieval augmentation can meet the strict reliability and efficiency requirements of operational security environments at scale.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T02:06:46Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Md Hasan Saju</name>
+    </author>
+    <author>
+      <name>Akramul Azim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.28028v1</id>
+    <title>Reliable Answers for Recurring Questions: Boosting Text-to-SQL Accuracy with Template Constrained Decoding</title>
+    <updated>2026-04-30T15:44:34Z</updated>
+    <link href="https://arxiv.org/abs/2604.28028v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.28028v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have revolutionized Text-to-SQL generation, allowing users to query structured data using natural language with growing ease. Yet, real-world deployment remains challenging, especially in complex or unseen schemas, due to inconsistent accuracy and the risk of generating invalid SQL. We introduce Template Constrained Decoding (TeCoD), a system that addresses these limitations by harnessing the recurrence of query patterns in labeled workloads. TeCoD converts historical NL-SQL pairs into reusable templates and introduces a robust template selection module that uses a fine-tuned natural language inference model to match or reject queries efficiently. Once the template is selected, TeCoD enforces it during SQL generation through grammar-constrained decoding, implemented via a novel partitioned strategy that ensures both syntactic validity and efficiency. Together, these components yield up to 36% higher execution accuracy than in-context learning (ICL) and 2.2x lower latency on matched queries.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T15:44:34Z</published>
+    <arxiv:comment>Project Code: https://github.com/SSLab-CSE-IITB/tecod</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Proceedings of the ACM on Management of Data, Volume 3, Issue 6, 2025, Article 357, Pages 1 - 26</arxiv:journal_ref>
+    <author>
+      <name>Smit Jivani</name>
+    </author>
+    <author>
+      <name>Sarvam Maheshwari</name>
+    </author>
+    <author>
+      <name>Sunita Sarawagi</name>
+    </author>
+    <arxiv:doi>10.1145/3769822</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3769822" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27674v1</id>
+    <title>One Single Hub Text Breaks CLIP: Identifying Vulnerabilities in Cross-Modal Encoders via Hubness</title>
+    <updated>2026-04-30T10:08:35Z</updated>
+    <link href="https://arxiv.org/abs/2604.27674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The hubness problem, in which hub embeddings are close to many unrelated examples, occurs often in high-dimensional embedding spaces and may pose a practical threat for purposes such as information retrieval and automatic evaluation metrics. In particular, since cross-modal similarity between text and images cannot be calculated by direct comparisons, such as string matching, cross-modal encoders that project different modalities into a shared space are helpful for various cross-modal applications, and thus, the existence of hubs may pose practical threats. To reveal the vulnerabilities of cross-modal encoders, we propose a method for identifying the hub embedding and its corresponding hub text. Experiments on image captioning evaluation in MSCOCO and nocaps along with image-to-text retrieval tasks in MSCOCO and Flickr30k showed that our method can identify a single hub text that unreasonably achieves comparable or higher similarity scores than human-written reference captions in many images, thereby revealing the vulnerabilities in cross-modal encoders.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T10:08:35Z</published>
+    <arxiv:comment>Accepted at ACL2026 (main)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hiroyuki Deguchi</name>
+    </author>
+    <author>
+      <name>Katsuki Chousa</name>
+    </author>
+    <author>
+      <name>Yusuke Sakai</name>
+    </author>
+  </entry>
+</feed>

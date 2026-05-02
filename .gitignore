@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Logs
+*.log
+logs/
+
+# FAISS vector store (binary large files)
+chatchat_data/data/knowledge_base/*/vector_store/
+chatchat_data/data/logs/
+
+# Crawler state & cache
+Langchain-Chatchat/data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Claude Code local
+.claude/settings.local.json
+
+# Config with API keys
+chatchat_data/model_settings.yaml
+
+# Data (except configs)
+chatchat_data/data/
+
+# Environment
+.env
+.env.local
